@@ -1,0 +1,31 @@
+
+// Colors
+
+$color-p :  hsl(243, 87%, 12%);
+$color-p-1 : hsl(238, 22%, 44%);
+$color-s : hsl(224, 93%, 58%);
+$color-s-2 :  hsl(170, 45%, 43%);
+$neutral-grey-l : hsl(240, 75%, 98%);
+$neutral-grey :hsl(0, 0%, 75%);
+
+// Font family
+
+$font-p : 'Raleway';
+$font-s : 'Open Sans';
+$weight-l : 400;
+$weight-b : 700;
+
+// Rem Function
+
+@function rem($size) {
+    $remSize : $size / 16 ;
+    @return #{$remSize}rem ;
+}
+
+// Mixin for Breakpoint
+
+@mixin  breakpoint($width) {
+    @media only screen and (max-width : $width) {
+         @content; 
+    }
+}

@@ -1,0 +1,258 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 90%;
+    padding-top: rem(60);
+    margin-bottom: rem(160);
+
+    // Navbar
+
+    &__logo--img {
+        width: 80%;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rem(50);
+    }
+
+    &__items {
+        display: flex;
+        justify-content: flex-end;
+        gap: rem(60);
+    }
+
+    // Content
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(800px) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            
+        }
+    }     
+
+
+    // Mail input
+
+    &__mail {
+        display: flex;
+        gap: rem(15);
+        width: 92%;
+
+        @include breakpoint(800px) {
+            width: 100%;
+            flex-direction: column;
+            height: 110px;
+        }
+    }
+}
+
+
+// Review Section
+
+.review {
+    position: relative;
+    width: 100%;
+    padding: rem(180) 0 rem(80);
+    display: flex;
+    justify-content: center;
+
+
+    
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        background-color: $neutral-grey-l;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        transform: scaleX(2.5);
+    }
+
+    &__content {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(800px){
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            
+        }
+    }
+
+    &__para {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+    }
+}
+
+// Call to Action
+
+.cta {
+    width: 100%;
+    background-color: $color-p-1;
+    padding: rem(110) 0 rem(100);
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 90%;
+        display: flex;  
+        justify-content: space-between;
+
+        @include breakpoint(800px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: rem(40);
+        }
+    }
+
+    &__content {
+        width: 43%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        @include breakpoint(800px) {
+            width: 80%;
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    &__mail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        width: 40%;
+        height: 85%;
+        gap: rem(17);
+        margin-right: rem(20);
+
+        @include breakpoint(800px) {
+            width: 90%;
+            align-self: center;
+            height: 120px;
+        }
+    }
+
+}
+
+.footer {
+    background-color: $color-p;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: rem(90) 0 rem(90);
+    color: #fff;
+    
+    &__container {
+        width: 90%;
+        position: relative;
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+
+        @include breakpoint(500px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: rem(14);
+        
+
+        &--info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+        justify-self: center;
+
+        @include breakpoint(500px) {
+            justify-self: start;
+        }
+        
+    }
+
+    &__social-media {
+        display: flex;
+        
+        gap: .9rem;
+        justify-content: flex-start;
+        margin-left: rem(120);
+
+        @include breakpoint(750px) {
+            justify-content: center;
+            margin-left: 0;
+            margin-top: rem(100);
+        }
+    
+        &--icon {
+            width: 1rem;
+            height: 1rem;
+            background: transparent;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            padding: 1rem; 
+            cursor: pointer;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &:hover {
+                background-color: #fff;
+            }
+    
+            &:hover > i {
+                color: $color-p;
+            }
+        }
+    
+        i {
+            color: #fff;
+            font-size: .8rem;         
+        }
+    }
+}
